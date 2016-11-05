@@ -22,9 +22,9 @@ int main(int argc, string argv[])
 		}
 	}
 	string txt
-		txt = GetString();;/*присвоєння змінній txt значення GetString */
+		txt = GetString();
 
-	char keytxt[strlen(txt)];/*присвоєння змінній keytxt типу char */
+	char keytxt[strlen(txt)];
 
 
 	for (int i = 0, j = 0; i < strlen(txt); i++)
@@ -47,6 +47,6 @@ int main(int argc, string argv[])
 			txt[i] = 97 + (txt[i] - 97 + tolower(keytxt[i]) - 97) % 26;
 		}
 	}
-	printf("%s\n", txt); /* вивід на дисплей значення змінної txt */
+	printf("%s\n", txt); 
 	return 0;
 }
