@@ -2,71 +2,38 @@
 //
 
 #include "stdafx.h"
-
 #include <iostream>
-
 #include <conio.h>
 
 using namespace std;
 
 class Digital_elements
-
 {
-
 public:
-
-	virtual double Signal()
-
-	{
-
+	virtual double Signal() {
 		return 0;
-
 	}
-
-	virtual int Get()
-
-	{
-
+	virtual int Get() {
 		return 0;
-
 	}
-
 };
 
-class Ñounters : public Digital_elements
-
-{
+class Ñounters : public Digital_elements {
 
 public:
-
-	virtual double Signal()
-
-	{
-
+	virtual double Signal() {
 		return 0;
-
 	}
-
-	virtual int Get()
-
-	{
-
+	virtual int Get() {
 		return 0;
-
 	}
-
 };
 
-class binary_counters : public Ñounters
-
-{
+class binary_counters : public Ñounters {
 
 public:
-
-	int Get()
-
-	{
-
+	int Get() {
+		
 		cout << " Ââåä³òü ê³ëüê³ñòü ñèãíàë³â, ÿê³ íàäõîäÿòü íà âõ³ä : ";
 
 		cin >> NumSignInput;
@@ -78,33 +45,22 @@ public:
 		Volume = NumSignInput*KoefBinCount;
 
 		return 0;
-
 	}
-
-	double Signal()
-
-	{
-
+	double Signal() {
 		return Volume;
-
 	}
 
 private:
 
 	int NumSignInput, KoefBinCount, Volume;
-
 };
 
-class binary_decimal_counters : public Ñounters
-
-{
+class binary_decimal_counters : public Ñounters {
 
 public:
 
-	int Get()
-
-	{
-
+	int Get() {
+		
 		cout << " Ââåä³òü ê³ëüê³ñòü ñèãíàë³â, ÿê³ íàäõîäÿòü íà âõ³ä : ";
 
 		cin >> NumSignInput1;
@@ -114,34 +70,23 @@ public:
 		cin >> KoefBinDesCount;
 
 		Volume1 = NumSignInput1*KoefBinDesCount;
-
+		
 		return 0;
-
 	}
-
-	double Signal()
-
-	{
-
+	double Signal() {
 		return Volume1;
-
 	}
 
 private:
 
 	int NumSignInput1, KoefBinDesCount, Volume1;
-
 };
 
-class reversing_counters : public Ñounters
-
-{
+class reversing_counters : public Ñounters {
 
 public:
 
-	int Get()
-
-	{
+	int Get() {
 
 		cout << " Ââåä³òü ê³ëüê³ñòü ñèãíàë³â, ÿê³ íàäõîäÿòü íà âõ³ä : ";
 
@@ -156,58 +101,35 @@ public:
 		cin >> VudZaliky;
 
 		Suma = (NumSignInput*KoefRevCount)*VudZaliky;
-
+		
 		return 0;
-
 	}
-
-	double Signal()
-
-	{
-
+	double Signal() {	
 		return Suma;
-
 	}
 
 private:
 
 	int NumSignInput, KoefRevCount, VudZaliky, Suma;
-
 };
 
-class Triggers : Digital_elements
-
-{
+class Triggers : Digital_elements {
 
 public:
 
-	virtual double Signal()
-
-	{
-
+	virtual double Signal() {
 		return 0;
-
 	}
-
-	virtual int Get()
-
-	{
-
+	virtual int Get() {
 		return 0;
-
 	}
-
 };
 
-class D_triggers : public Triggers
-
-{
+class D_triggers : public Triggers {
 
 public:
 
-	int Get()
-
-	{
+	int Get() {
 
 		cout << " Ââåä³òü ÷àñ çàòðèìêè ñèãíàë³â, ÿê³ íàäõîäÿòü íà âõ³ä : ";
 
@@ -224,32 +146,21 @@ public:
 		Suma = (NumSignInput*KoefRevCount)*KilVxody;;
 
 		return 0;
-
 	}
-
-	double Signal()
-
-	{
-
+	double Signal() {
 		return Suma;
-
 	}
 
 private:
 
 	int NumSignInput, KoefRevCount, KilVxody, Suma;
-
 };
 
-class RS_triggers : public Triggers
-
-{
+class RS_triggers : public Triggers {
 
 public:
 
-	int Get()
-
-	{
+	int Get() {
 
 		cout << " Ââåä³òü ÷àñ çàòðèìêè ñèãíàë³â, ÿê³ íàäõîäÿòü íà âõ³ä : ";
 
@@ -264,58 +175,35 @@ public:
 		cin >> KilVxody;;
 
 		Suma = (NumSignInput*KoefRevCount)*KilVxody;;
-
+	
 		return 0;
-
 	}
-
-	double Signal()
-
-	{
-
+	double Signal() {
 		return Suma;
-
 	}
 
 private:
 
 	int NumSignInput, KoefRevCount, KilVxody, Suma;
-
 };
 
-class Registers : public Digital_elements
-
-{
+class Registers : public Digital_elements {
 
 public:
 
-	virtual double Signal()
-
-	{
-
+	virtual double Signal() {
 		return 0;
-
 	}
-
-	virtual int Get()
-
-	{
-
+	virtual int Get() {
 		return 0;
-
 	}
-
 };
 
-class multiplexers : public Registers
-
-{
+class multiplexers : public Registers {
 
 public:
 
-	int Get()
-
-	{
+	int Get() {
 
 		cout << " Ââåä³òü ê³ëüê³ñòü âõîä³â â ìóëüòèïëåêñîð : ";
 
@@ -330,58 +218,37 @@ public:
 		cin >> KilVxody;;
 
 		return 0;
-
 	}
-
-	double Signal()
-
-	{
-
+	double Signal() {
 		return 0;
-
 	}
 
 private:
 
 	int NumSignInput, KoefRevCount, KilVxody;
-
 };
 
-class shifting_registers : public Registers
-
-{
+class shifting_registers : public Registers {
 
 public:
 
-	virtual double Signal()
-
-	{
-
+	virtual double Signal() {
 		return 0;
-
 	}
-
-	virtual int Get()
-
-	{
-
+	virtual int Get() {
 		return 0;
-
 	}
-
 };
 
-int main()
+int main() {
 
-{
-
-	setlocale(LC_ALL, " Ukrainian");
+	setlocale(LC_ALL, " Ukrainian ");
 
 	cout << " Âèáåð³òü ïðèñòðié : " << endl;
 
-	cout << " 1.Äâ³éêîâ³ ë³÷èëüíèêè " << endl;
+	cout << " 1. Äâ³éêîâ³ ë³÷èëüíèêè " << endl;
 
-	cout << " 2.Äâ³éêîâî - äåñÿòêîâ³ ë³÷èëüíèêè" << endl;
+	cout << " 2. Äâ³éêîâî - äåñÿòêîâ³ ë³÷èëüíèêè " << endl;
 
 	cout << " 3. Ðåâåðñèâí³ ë³÷èëüíèêè " << endl;
 
@@ -389,106 +256,74 @@ int main()
 
 	cout << " 5. RS - òðèãåð " << endl;
 
-	cout << " 6. Ìóëüòèïëåêñîð"<< endl;
+	cout << " 6. Ìóëüòèïëåêñîð " << endl;
 
-	cout <<" 7. Çñóâàþ÷³ ðåã³ñòðè"<< endl;
+	cout << " 7. Çñóâàþ÷³ ðåã³ñòðè " << endl;
 
 	int choise;
 
 	cin >> choise;
 
-	if (choise == 1)
+	if (choise == 1) 	{
 
-	{
-
-		Ñounters *ptr1 = new binary_counters;
-
+		Ñounters * ptr1 = new binary_counters;
+		
 		ptr1 -> Get();
 
 		cout << (ptr1 -> Signal()) << endl;
-
 	}
+	else if (choise == 2) {
 
-	else if (choise == 2)
-
-	{
-
-		Ñounters *ptr2 = new binary_decimal_counters;
+		Ñounters * ptr2 = new binary_decimal_counters;
 
 		ptr2 ->Get();
 
 		cout << (ptr2 -> Signal()) << endl;
-
 	}
+	else if (choise == 3) {
 
-	else if (choise == 3)
-
-	{
-
-		Ñounters *ptr3 = new reversing_counters;
+		Ñounters * ptr3 = new reversing_counters;
 
 		ptr3 -> Get();
 
 		cout << (ptr3 -> Signal()) << endl;
-
 	}
+	else if (choise == 4) {
 
-	else if (choise == 4)
-
-	{
-
-		Triggers *ptr4 = new D_triggers;
+		Triggers * ptr4 = new D_triggers;
 
 		ptr4 -> Get();
 
 		cout << (ptr4 -> Signal()) << endl;
-
 	}
+	else if (choise == 5) {
 
-	else if (choise == 5)
-
-	{
-
-		Triggers *ptr5 = new RS_triggers;
+		Triggers * ptr5 = new RS_triggers;
 
 		ptr5 -> Get();
 
 		cout << (ptr5 -> Signal()) << endl;
-
 	}
+	else if (choise == 6) {
 
-	else if (choise == 6)
-
-	{
-
-		Registers *ptr6 = new multiplexers;
+		Registers * ptr6 = new multiplexers;
 
 		ptr6 -> Get();
 
 		cout << (ptr6 -> Signal()) << endl;
-
 	}
+	else if (choise == 7) {
 
-	else if (choise == 7)
-
-	{
-
-		Registers *ptr7 = new shifting_registers;
+		Registers * ptr7 = new shifting_registers;
 
 		ptr7 -> Get();
 
 		cout << (ptr7 -> Signal()) << endl;
-
 	}
-
 	else {
 
-		cout <<" Number is not valid"<< endl;
-
+		cout << " Number is not valid " << endl;
 		return 0;
-
 	}
-
 	_getch();
-
 }
